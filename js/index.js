@@ -34,11 +34,11 @@ function init() {
         }
     })
     $(".countDown").text(timeInterval);
-    $.getJSON('http://www.virtualfans.club/mvp.php?callback=?', function (jsondata) {
+    $.getJSON('https://www.virtualfans.club/mvp.php?callback=?', function (jsondata) {
         lastMVP = jsondata.mvp;
     })
     MVPtimer = setInterval(function () {
-        $.getJSON('http://www.virtualfans.club/mvp.php?callback=?', function (jsondata) {
+        $.getJSON('https://www.virtualfans.club/mvp.php?callback=?', function (jsondata) {
             var tmp = jsondata.mvp;
             if (tmp != lastMVP) {
                 MVPSEPlay()
@@ -171,8 +171,13 @@ $(function () {
             $(this).text(" 已开启");
             MVPon = true;
             MVPtimer = setInterval(function () {
-
-
+                $.getJSON('https://www.virtualfans.club/mvp.php?callback=?', function (jsondata) {
+                    var tmp = jsondata.mvp;
+                    if (tmp != lastMVP) {
+                        MVPSEPlay()
+                        lastMVP = tmp;
+                    }
+                })
             }, 3000);
         }
     })
