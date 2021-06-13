@@ -1,0 +1,178 @@
+.promoBar {
+    display: inline-flex;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    width: 100%;
+    left: 0%;
+    position: fixed;
+    bottom: 0;
+    background-color: #3a4344;
+    color: white;
+}
+html{
+    height: 100%;
+    body{
+        height: 100%;
+        background-image: url("../img/background.jpg");
+        background-repeat: no-repeat;
+        background-position: top;
+      }
+}
+
+
+
+  
+.bg{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 600px;
+    height: 400px;
+    background : rgba(255,255,255,0.3);
+    border-radius:  15px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .title{
+        color:#FFF;
+        font-size: 40px;
+        text-shadow: 2px 2px 2px black, -1px -1px 3px black;
+        margin-bottom: 0px;
+    }
+
+    .btn{
+        background : rgba(255,255,255,0.1);
+        border-radius:  15px;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+        cursor: pointer;
+        user-select:none;
+        text-align: center;
+        transition-duration: .2s;
+        transition-property: all;
+        border: 0px;
+        &:hover{
+            border-radius:  0px;
+            background : rgba(255,255,255,0.6);
+        }
+        &:active{
+            border-radius:  25px;
+            background : rgba(255,255,255,0);
+        }
+    }
+    .active{
+        background : rgba(255,255,255,0.6);
+    }
+}
+
+.settings{
+    display: none;
+    setting{
+        position: relative;
+    }
+    .musicToggle{
+        display: flex;
+        width: 600px;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .btn{
+        display: inline-block;
+        line-height: 40px;
+        font-size: 20px;
+        height: 40px;
+        width: 170px;
+    }
+    h2{
+        position: relative;
+        left: 40px;
+        top: -10px;
+        font-size: 25px;
+        color:#FFF;
+        text-shadow: 2px 2px 2px black, -1px -1px 3px black;
+        margin-bottom: 0px;
+    }
+    input{
+        position: relative;
+        left: 200px;
+        top: 10px;
+    }
+}
+
+.main{
+
+    .btime{
+        color:#DDD;
+        font-size: 60px;
+        text-shadow: 2px 2px 2px black, -1px -1px 3px black;
+        
+    }
+    .stime{
+        color: #3a4344;
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+        margin-top: -60px;
+        .timeToday{
+            margin: 10px;
+            &::before{
+                content: "今日时长:";
+
+            }
+        }
+        .timeTot{
+            margin: 10px;
+            &::before{
+                content: "生涯时长:";
+            }
+        }
+
+    }
+    
+    .begin{
+        line-height: 70px;
+        font-size: 20px;
+        height: 70px;
+        width: 200px;
+    }
+    .mvpToggle{
+        position:absolute;
+        left: 50px;
+        font-size: 12px;
+        bottom: 50px;
+        height: 40px;
+        width: 120px;
+        line-height: 40px;
+        &::before{
+            content: "MVP监测";
+
+        }
+    }
+    .setTimer{
+        position:absolute;
+        bottom: 130px;
+        input{
+            background : rgba(255,255,255,0.7);
+            border-radius:  5px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+            width: 35px;
+        }
+    }
+    .settingbtn{
+        position:absolute;
+        right: 50px;
+        font-size: 12px;
+        bottom: 50px;
+        height: 40px;
+        width: 120px;
+        line-height: 40px;
+    }
+  }
+  

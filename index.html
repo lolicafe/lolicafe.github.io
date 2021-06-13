@@ -1,1 +1,136 @@
-e酱！呜呜呜我的e酱！
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="dsk1D2A">
+    <meta name="keywords" content="lolicafe,maplestory,gmsr,tools">
+    <meta name="description" content="e酱！呜呜呜我的e酱！">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery3.5.1.js"></script>
+    <script src="./js/index.js"></script>
+    <title>lolicafe!</title>
+</head>
+
+
+
+<body>
+    <div class="d" style="display: none;"></div>
+    <audio controls class="normalSEPlay" hidden controlsList="nodownload">
+        <source src="./se/1.wav">
+    </audio>
+    <audio controls class="MVPSEPlay" hidden controlsList="nodownload">
+        <source src="./se/2.wav">
+    </audio>
+    <div class="bg">
+        <div class="box main">
+            <h1 class="title">
+                捡钱提醒
+            </h1>
+            <div class="btime">
+                <span class="thisTime time">
+                    <span class="hr">00</span>
+                    :
+                    <span class="min">00</span>
+                    :
+                    <span class="s">00</span>
+                </span>
+                -
+                <span class="countDown">
+
+                </span>
+            </div>
+            <div class="stime">
+                <span class="timeToday time">
+                    <span class="hr">000</span>
+                    :
+                    <span class="min">00</span>
+                    :
+                    <span class="s">00</span>
+                </span>
+                <span class="timeTot time">
+                    <span class="hr">000</span>
+                    :
+                    <span class="min">00</span>
+                    :
+                    <span class="s">00</span>
+                </span>
+                <span class="report">
+
+                </span>
+            </div>
+            <div class="setTimer">
+                每
+                <input type="number" placeholder="1-999" class="timeInterval" max=999 min=1>
+                秒提醒一次
+            </div>
+            <div class="begin btn">
+                开始计时
+            </div>
+            <div class="mvpToggle btn">
+                已开启
+            </div>
+            <div class="settingbtn btn">
+                设置
+            </div>
+        </div>
+        <div class="box settings">
+            <h1 class="title">
+                设置
+            </h1>
+            <div class="normalMusic setting">
+                <h2>
+                    刷钱提醒音效：
+                </h2>
+                <div class="musicToggle">
+                    <span class="btn active default">
+                        使用默认音效
+                    </span>
+                    <span class="btn custom">
+                        使用自定义音效
+                    </span>
+                </div>
+                <div class="musicSrc">
+                    <input type="file" accept="audio/*" class="normalSE" onchange="SEupload1()" id="1">
+                </div>
+
+            </div>
+            <div class="MVPMusic  setting">
+                <h2>
+                    MVP提醒音效：
+                </h2>
+
+                <div class="musicToggle">
+                    <span class="btn active default">
+                        使用默认音效
+                    </span>
+                    <span class="btn custom">
+                        使用自定义音效
+                    </span>
+                </div>
+                <div class="musicSrc">
+                        <input type="file" accept="audio/*" class="MVPSE" onchange="SEupload2()" id="2">
+                </div>
+
+            </div>
+            <div class="save">
+                <span class="btn" style="width: 120px;">
+                    保存
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="promoBar">
+        <span class="left" style="margin: 0px 10px;">
+            <h1>
+                <span style="color: #ffdd57;">Produced</span>
+                by
+                <span style="color: #48c774;">dsk1D2A</span>
+            </h1>
+        </span>
+    </div>
+</body>
+
+</html>
