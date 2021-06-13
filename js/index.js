@@ -79,7 +79,11 @@ $(function () {
         $(this).addClass("active").siblings().removeClass("active");;
         var parent = $(this).parent().parent();
         if (parent.hasClass("normalMusic")) {
-            normalSEPlay();
+            if ($(this).hasClass("default"))
+                $(".normalSEPlay")[0].play()
+            else
+                normalSE.play();
+
         }
         else {
             if ($(this).hasClass("default")) {
