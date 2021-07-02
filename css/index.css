@@ -14,6 +14,10 @@
   display: inline-block;
   margin: 0px 10px;
 }
+.promoBar .supbtn {
+  cursor: pointer;
+  user-select: none;
+}
 html {
   height: 100%;
 }
@@ -23,49 +27,129 @@ html body {
   background-repeat: no-repeat;
   background-position: top;
 }
-.bg {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.box {
-  width: 600px;
-  height: 400px;
+.whiteBG {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  display: flex;
+}
+.topBar {
+  display: inline-flex;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  left: 0%;
+  position: fixed;
+  top: 0;
+  border-radius: 0px;
+  justify-content: space-evenly;
+}
+.topBar .btn {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px;
+}
+.topBar h1 {
+  display: inline-block;
+  font-size: 30px;
+  margin: 0px 10px;
+  color: #FFF;
+  text-shadow: 2px 2px 2px black, -1px -1px 3px black;
+  margin-bottom: 0px;
+}
+.support {
+  width: 1200px;
+  height: 600px;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: none;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
-.box .title {
+.support .return {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 15px;
+}
+.support .space {
+  width: 1200px;
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.support img {
+  width: 300px;
+}
+.title {
   color: #FFF;
   font-size: 40px;
   text-shadow: 2px 2px 2px black, -1px -1px 3px black;
   margin-bottom: 0px;
+  text-align: center;
 }
-.box .btn {
+.btn {
+  cursor: pointer;
+  user-select: none;
+  transition-duration: 0.2s;
+  transition-property: all;
+  text-align: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  user-select: none;
-  text-align: center;
-  transition-duration: 0.2s;
-  transition-property: all;
   border: 0px;
 }
-.box .btn:hover {
-  border-radius: 0px;
+.btn:hover {
   background: rgba(255, 255, 255, 0.6);
+  border-radius: 0px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
-.box .btn:active {
+.btn:active {
   border-radius: 25px;
   background: rgba(255, 255, 255, 0);
+}
+.bg {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ms {
+  width: 400px;
+  height: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ms .channel {
+  text-align: center;
+  font-size: 35px;
+  color: #FFF;
+  text-shadow: 2px 2px 2px black, -1px -1px 3px black;
+}
+.box {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .box .active {
   background: rgba(255, 255, 255, 0.6);
@@ -88,6 +172,10 @@ html body {
   font-size: 20px;
   height: 40px;
   width: 170px;
+}
+.settings .default,
+.settings .voice {
+  width: 50px;
 }
 .settings h2 {
   position: relative;
@@ -119,7 +207,7 @@ html body {
   margin: 10px;
 }
 .main .stime .timeToday::before {
-  content: "今日时长:";
+  content: "本轮时长:";
 }
 .main .stime .timeTot {
   margin: 10px;

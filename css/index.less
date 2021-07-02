@@ -1,183 +1,303 @@
 .promoBar {
-    display: inline-flex;
-    height: 1.2rem;
-    line-height: 1.2rem;
-    width: 100%;
-    left: 0%;
-    position: fixed;
-    bottom: 0;
+    display         : inline-flex;
+    height          : 1.2rem;
+    line-height     : 1.2rem;
+    width           : 100%;
+    left            : 0%;
+    position        : fixed;
+    bottom          : 0;
     background-color: #3a4344;
-    color: white;
-    justify-content: space-between;
-    h1{
+    color           : white;
+    justify-content : space-between;
+
+    h1 {
         display: inline-block;
-        margin: 0px 10px;
+        margin : 0px 10px;
+    }
+    .supbtn{
+        cursor             : pointer;
+        user-select        : none;
     }
 }
-html{
+
+html {
     height: 100%;
-    body{
-        height: 100%;
-        background-image: url("../img/background.jpg");
-        background-repeat: no-repeat;
+
+    body {
+        height             : 100%;
+        background-image   : url("../img/background.jpg");
+        background-repeat  : no-repeat;
         background-position: top;
-      }
+    }
 }
 
-
-
-  
-.bg{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.whiteBG {
+    background             : rgba(255, 255, 255, 0.3);
+    border-radius          : 15px;
+    box-shadow             : 3px 3px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter        : blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
-.box{
-    width: 600px;
-    height: 400px;
-    background : rgba(255,255,255,0.3);
-    border-radius:  15px;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter:blur(10px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    .title{
-        color:#FFF;
-        font-size: 40px;
-        text-shadow: 2px 2px 2px black, -1px -1px 3px black;
+.topBar {
+    display        : inline-flex;
+    height         : 40px;
+    line-height    : 40px;
+    width          : 100%;
+    left           : 0%;
+    position       : fixed;
+    top            : 0;
+    border-radius  : 0px;
+    justify-content: space-evenly;
+
+    .btn {
+        background   : rgba(255, 255, 255, 0);
+        border-radius: 0px;
+        box-shadow   : 0px 0px 0px;
+    }
+
+    h1 {
+        display      : inline-block;
+        font-size    : 30px;
+        margin       : 0px 10px;
+        color        : #FFF;
+        text-shadow  : 2px 2px 2px black, -1px -1px 3px black;
         margin-bottom: 0px;
     }
-
-    .btn{
-        background : rgba(255,255,255,0.1);
-        border-radius:  15px;
-        box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-        cursor: pointer;
-        user-select:none;
-        text-align: center;
-        transition-duration: .2s;
-        transition-property: all;
-        border: 0px;
-        &:hover{
-            border-radius:  0px;
-            background : rgba(255,255,255,0.6);
-        }
-        &:active{
-            border-radius:  25px;
-            background : rgba(255,255,255,0);
-        }
-    }
-    .active{
-        background : rgba(255,255,255,0.6);
-    }
 }
 
-.settings{
+.support {
+    position: fixed;
+    width   : 1200px;
+    height  : 600px;
+    position: fixed;
+    margin  : auto;
+    left    : 0;
+    right   : 0;
+    top     : 0;
+    bottom  : 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
     display: none;
-    setting{
-        position: relative;
-    }
-    .musicToggle{
-        display: flex;
-        width: 600px;
-        justify-content:space-evenly;
-        align-items: center;
-    }
-    .btn{
-        display: inline-block;
-        line-height: 40px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .return{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 30px;
+        height: 30px;
         font-size: 20px;
-        height: 40px;
-        width: 170px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 15px;
     }
-    h2{
-        position: relative;
-        left: 40px;
-        top: -10px;
-        font-size: 25px;
-        color:#FFF;
-        text-shadow: 2px 2px 2px black, -1px -1px 3px black;
-        margin-bottom: 0px;
-    }
-    input{
-        position: relative;
-        left: 200px;
-        top: 10px;
-    }
-}
+    .space{
+        width: 1200px;
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
 
-.main{
-
-    .btime{
-        color:#DDD;
-        font-size: 60px;
-        text-shadow: 2px 2px 2px black, -1px -1px 3px black;
+    }
+    img{
+        width: 300px;
         
     }
-    .stime{
-        color: #3a4344;
-        font-size: 20px;
+}
+
+
+.title {
+    color        : #FFF;
+    font-size    : 40px;
+    text-shadow  : 2px 2px 2px black, -1px -1px 3px black;
+    margin-bottom: 0px;
+    text-align   : center;
+}
+
+.btn {
+    cursor             : pointer;
+    user-select        : none;
+    transition-duration: .2s;
+    transition-property: all;
+    text-align         : center;
+    background         : rgba(255, 255, 255, 0.1);
+    border-radius      : 15px;
+    box-shadow         : 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border             : 0px;
+
+    &:hover {
+        background   : rgba(255, 255, 255, 0.6);
+        border-radius: 0px;
+        box-shadow   : 3px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        border-radius: 25px;
+        background   : rgba(255, 255, 255, 0);
+    }
+}
+
+.bg {
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+}
+
+.ms {
+    width        : 400px;
+    height       : 100px;
+    margin-bottom: 50px;
+    display      : flex;
+
+    justify-content: center;
+    align-items    : center;
+
+    .channel {
+        text-align : center;
+        font-size  : 35px;
+        color      : #FFF;
+        text-shadow: 2px 2px 2px black, -1px -1px 3px black;
+
+    }
+}
+
+.box {
+    width          : 600px;
+    height         : 400px;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-around;
+    align-items    : center;
+
+    .active {
+        background: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.settings {
+    display: none;
+
+    setting {
+        position: relative;
+    }
+
+    .musicToggle {
+        display        : flex;
+        width          : 600px;
+        justify-content: space-evenly;
+        align-items    : center;
+    }
+
+    .btn {
+        display    : inline-block;
+        line-height: 40px;
+        font-size  : 20px;
+        height     : 40px;
+        width      : 170px;
+    }
+
+    .default,
+    .voice {
+        width: 50px;
+    }
+
+    h2 {
+        position     : relative;
+        left         : 40px;
+        top          : -10px;
+        font-size    : 25px;
+        color        : #FFF;
+        text-shadow  : 2px 2px 2px black, -1px -1px 3px black;
+        margin-bottom: 0px;
+    }
+
+    input {
+        position: relative;
+        left    : 200px;
+        top     : 10px;
+    }
+}
+
+.main {
+
+    .btime {
+        color      : #DDD;
+        font-size  : 60px;
+        text-shadow: 2px 2px 2px black, -1px -1px 3px black;
+
+    }
+
+    .stime {
+        color      : #3a4344;
+        font-size  : 20px;
         line-height: 22px;
-        text-align: center;
-        margin-top: -60px;
-        .timeToday{
+        text-align : center;
+        margin-top : -60px;
+
+        .timeToday {
             margin: 10px;
-            &::before{
-                content: "今日时长:";
+
+            &::before {
+                content: "本轮时长:";
 
             }
         }
-        .timeTot{
+
+        .timeTot {
             margin: 10px;
-            &::before{
+
+            &::before {
                 content: "生涯时长:";
             }
         }
 
     }
-    
-    .begin{
+
+    .begin {
         line-height: 70px;
-        font-size: 20px;
-        height: 70px;
-        width: 200px;
+        font-size  : 20px;
+        height     : 70px;
+        width      : 200px;
     }
-    .mvpToggle{
-        position:absolute;
-        left: 50px;
-        font-size: 12px;
-        bottom: 50px;
-        height: 40px;
-        width: 120px;
+
+    .mvpToggle {
+        position   : absolute;
+        left       : 50px;
+        font-size  : 12px;
+        bottom     : 50px;
+        height     : 40px;
+        width      : 120px;
         line-height: 40px;
-        &::before{
+
+        &::before {
             content: "MVP监测";
 
         }
     }
-    .setTimer{
-        position:absolute;
-        bottom: 130px;
-        input{
-            background : rgba(255,255,255,0.7);
-            border-radius:  5px;
-            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-            width: 35px;
+
+    .setTimer {
+        position: absolute;
+        bottom  : 130px;
+
+        input {
+            background   : rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+            box-shadow   : 3px 3px 10px rgba(0, 0, 0, 0.2);
+            width        : 35px;
         }
     }
-    .settingbtn{
-        position:absolute;
-        right: 50px;
-        font-size: 12px;
-        bottom: 50px;
-        height: 40px;
-        width: 120px;
+
+    .settingbtn {
+        position   : absolute;
+        right      : 50px;
+        font-size  : 12px;
+        bottom     : 50px;
+        height     : 40px;
+        width      : 120px;
         line-height: 40px;
     }
-  }
-  
+}

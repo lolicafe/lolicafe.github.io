@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
     <meta charset="utf-8">
@@ -11,20 +11,52 @@
     <script src="./js/jquery3.5.1.js"></script>
     <script src="./js/index.js"></script>
     <title>lolicafe!</title>
+
+    <audio controls class="normalSEPlay" hidden controlsList="nodownload">
+        <source src="./se/0.ogg">
+    </audio>
+    <audio controls class="MVPSEPlay" hidden controlsList="nodownload">
+        <source src="./se/1.ogg">
+    </audio>
+    <audio controls class="MVPVoicePlay" hidden controlsList="nodownload">
+        <source src="./se/mvp0.mp3">
+    </audio>
+    <audio controls class="onPlay" hidden controlsList="nodownload">
+        <source src="./se/on.ogg">
+    </audio>
+    <audio controls class="offPlay" hidden controlsList="nodownload">
+        <source src="./se/off.ogg">
+    </audio>
 </head>
 
 
 
 <body>
-    <div class="d" style="display: none;"></div>
-    <audio controls class="normalSEPlay" hidden controlsList="nodownload">
-        <source src="./se/1.wav">
-    </audio>
-    <audio controls class="MVPSEPlay" hidden controlsList="nodownload">
-        <source src="./se/2.wav">
-    </audio>
+
+    <div class="topBar whiteBG">
+        <div class="option btn">
+            <h1>
+                捡钱提醒
+            </h1>
+        </div>
+        <div class="option btn">
+            <h1>
+                核心计算
+            </h1>
+        </div>
+        <div class="option btn">
+            <h1>
+                敬请期待
+            </h1>
+        </div>
+    </div>
+
     <div class="bg">
-        <div class="box main">
+        <div class="ms whiteBG">
+            <div class="channel">11</div>
+        </div>
+
+        <div class="box main whiteBG">
             <h1 class="title">
                 捡钱提醒
             </h1>
@@ -75,7 +107,7 @@
                 设置
             </div>
         </div>
-        <div class="box settings">
+        <div class="box settings whiteBG">
             <h1 class="title">
                 设置
             </h1>
@@ -84,8 +116,20 @@
                     刷钱提醒音效：
                 </h2>
                 <div class="musicToggle">
-                    <span class="btn active default">
-                        使用默认音效
+                    <span class="btn default">
+                        1
+                    </span>
+                    <span class="btn default">
+                        2
+                    </span>
+                    <span class="btn default">
+                        3
+                    </span>
+                    <span class="btn default">
+                        4
+                    </span>
+                    <span class="btn default">
+                        5
                     </span>
                     <span class="btn custom">
                         使用自定义音效
@@ -102,8 +146,20 @@
                 </h2>
 
                 <div class="musicToggle">
-                    <span class="btn active default">
-                        使用默认音效
+                    <span class="btn default">
+                        1
+                    </span>
+                    <span class="btn default">
+                        2
+                    </span>
+                    <span class="btn default">
+                        3
+                    </span>
+                    <span class="btn default">
+                        4
+                    </span>
+                    <span class="btn voice">
+                        语音
                     </span>
                     <span class="btn custom">
                         使用自定义音效
@@ -122,13 +178,28 @@
         </div>
     </div>
 
+    <div class="support" >
+        <div class="btn return">
+            X
+        </div>
+        <div class="title">
+            谢谢老板！
+        </div>
+        <div class="space">
+            <img src="./img/alipay.jpg" alt="">
+            <img src="./img/wechatpay.png" alt="">
+            <img src="./img/qqpay.png" alt="">
+        </div>
+    </div>
+
     <div class="promoBar">
         <span class="left" style="margin: 0px 10px;">
             <h1>
                 <span style="color: #ffdd57;">Produced</span>
                 by
                 <span style="color: #48c774;">dsk1D2A</span>
-
+                <span style="color: #8d97a3; margin-left: 20px;">如果您用的开心可以</span>
+                <span class="supbtn" style="color: #f5f4a0;">点此赞助我们！</span>
             </h1>
 
         </span>
@@ -146,5 +217,4 @@
         </span>
     </div>
 </body>
-
 </html>
