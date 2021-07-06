@@ -143,25 +143,38 @@ html {
     height         : 100%;
     display        : flex;
     flex-direction : column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items    : center;
 }
 
 .ms {
     width        : 400px;
     height       : 100px;
-    margin-bottom: 50px;
+    //margin: 50px;
     display      : flex;
 
     justify-content: center;
     align-items    : center;
 
-    .channel {
+    .channel,.timeNow {
         text-align : center;
         font-size  : 35px;
         color      : #FFF;
         text-shadow: 2px 2px 2px black, -1px -1px 3px black;
 
+    }
+    .timeNow{
+        display: flex;
+        justify-content: space-evenly;
+        align-items    : center;
+        width: 300px;
+        .timeByHr{
+            font-size  : 50px;
+        }
+        .timeByDay{
+            font-size  : 20px;
+            width: 70px;
+        }
     }
 }
 
@@ -223,7 +236,6 @@ html {
 }
 
 .main {
-
     .btime {
         color      : #DDD;
         font-size  : 60px;

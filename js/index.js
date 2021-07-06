@@ -16,6 +16,7 @@ function normalSEPlay() {
         normalSE.play();
 }
 
+
 function MVPSEPlay() {
     if (MVPToggle == 0)
         $(".MVPSEPlay")[0].play();
@@ -69,6 +70,18 @@ function init() {
         MVPToggle = localStorage.MVPToggle || 1;
     }//读取历史记录
     timeInterval = timeInterval || 120;
+
+
+    setInterval(function(){
+        var timeNow = new Date();
+        console.log(timeNow)
+        console.log(timeNow.format("hh:mm:ss"));
+        $(".timeByHr").text(timeNow.format("hh:mm:ss"));
+        var arr_week = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+        week = arr_week[timeNow.getDay()];
+        $(".timeByDay").text(timeNow.format("MM/dd")+week);
+    },1000)//设置时钟
+
 
     $(".timeInterval").change(function () {
         timeInterval = $(".timeInterval").val() || 120;
