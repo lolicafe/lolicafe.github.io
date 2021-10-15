@@ -31,12 +31,14 @@ function MVPSEPlay() {
     if (MVPToggle == 2)
         MVPSE.play();
 }
+
 function setMsChannel() {
     if (msMVP == 0)
         $(".channel").text("暂无MsMVP信息。")
     else
         $(".channel").text("Ms频道："+ msMVP+"线")
 }
+
 function save() {
     if (typeof (Storage) !== "undefined") {
         localStorage.hr = $(".timeTot").children(".hr").text();
@@ -90,11 +92,13 @@ function init() {
         }
     })
     $(".countDown").text(timeInterval);
+    /*
     $.getJSON('https://www.virtualfans.club/mvp.php?callback=?', function (jsondata) {
         lastMVP = jsondata.mvp;
         msMVP = jsondata.ms;
         setMsChannel();
     })
+
     MVPtimer = setInterval(function () {
         $.getJSON('https://www.virtualfans.club/mvp.php?callback=?', function (jsondata) {
             var tmp = jsondata.mvp;
@@ -105,7 +109,9 @@ function init() {
                 MVPSEPlay()
             }
         })
+        
     }, 3000);
+    */
 
     $(".normalMusic .btn").eq(normalSEOrder).addClass("active");
     $(".normalSEPlay").attr("src", "./se/" + normalSEOrder + ".ogg")
@@ -262,6 +268,7 @@ $(function () {
         } else {
             $(this).text(" 已开启");
             MVPon = true;
+            /*
             MVPtimer = setInterval(function () {
                 $.getJSON('https://www.virtualfans.club/mvp.php?callback=?', function (jsondata) {
                     var tmp = jsondata.mvp;
@@ -273,7 +280,9 @@ $(function () {
                     }
                 })
             }, 3000);
+             */
         }
+
     })
 
     $(".countDown").change(function () {
